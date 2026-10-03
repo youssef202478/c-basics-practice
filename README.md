@@ -21,5 +21,5 @@ This repository contains my daily practice projects to master C language fundame
 
 ## 🛠️ Tools & Environment
 * **Language:** C
-* **IDE:** Visual Studio Code / Code::Blocks
+* **IDE:** Visual Studio Code 
 * **Compiler:** GCC
