@@ -10,10 +10,10 @@ int main() {
     float price = 0.0f, quantity = 0.0f, total = 0.0f, discount = 0.0f;
 
     printf("=================================\n");
-    printf("     Welcome TO MY Market     \n");
+    printf("     Welcome To My Market     \n");
     printf("=================================\n\n");
 
-    printf("Khtar l-category:\n");
+    printf("Choose a category:\n");
     printf("1. Fruits (10%% Discount)\n");
     printf("2. Books (15%% Discount)\n");
     printf("3. Tech Products (30%% Discount)\n");
@@ -111,17 +111,17 @@ int main() {
 
         case 4: // FOOD MENU
             printf("\n--- L-Marmita & Tech Cafe Menu ---\n");
-            printf("1. Breakfast (Ftor Beldi)\n");
-            printf("2. Lunch (Gheda MALAKI)\n");
-            printf("3. Dinner (L3cha Express)\n");
+            printf("1. Breakfast\n");
+            printf("2. Lunch\n");
+            printf("3. Dinner\n");
             printf("Choose meal type (1-3): ");
             scanf("%d", &subChoice);
 
             if (subChoice == 1) { // 1. BREAKFAST
-                printf("\n--- Ftor Beldi Menu ---\n");
-                printf("1. Msemen + Atay (DH 8.00)\n");
-                printf("2. Harcha + raib (DH 6.00)\n");
-                printf("3. Baghrir + Zid L-3ssel (DH 9.00)\n");
+                printf("\n--- Breakfast Menu ---\n");
+                printf("1. Msemen + Tea (DH 8.00)\n");
+                printf("2. Harcha + Yogurt (DH 6.00)\n");
+                printf("3. Baghrir + Honey (DH 9.00)\n");
                 printf("Select item: ");
                 scanf("%d", &subChoice);
 
@@ -131,10 +131,10 @@ int main() {
                 else { printf("Invalid choice!\n"); return 1; }
             }
             else if (subChoice == 2) { // 2. LUNCH
-                printf("\n--- Gheda MALAKI Menu ---\n");
-                printf("1. CousCous(DH 55.00)\n");
-                printf("2. Tagine  (DH 20.00)\n");
-                printf("3. Tanjia(DH 50.00)\n");
+                printf("\n--- Lunch Menu ---\n");
+                printf("1. Couscous (DH 55.00)\n");
+                printf("2. Tagine (DH 20.00)\n");
+                printf("3. Tanjia (DH 50.00)\n");
                 printf("Select item: ");
                 scanf("%d", &subChoice);
 
@@ -152,10 +152,10 @@ int main() {
                 }
             }
             else if (subChoice == 3) { // 3. DINNER
-                printf("\n--- L3cha Express Menu ---\n");
-                printf("1. Bocadillos Tounsi (DH 25.00)\n");
-                printf("2. Sandwich L-7ouma (DH 7.00)\n");
-                printf("3. djaj m7mr(DH 80.00)\n");
+                printf("\n--- Dinner Menu ---\n");
+                printf("1. Tunisian Sandwich (DH 25.00)\n");
+                printf("2. Local Sandwich (DH 7.00)\n");
+                printf("3. Grilled Chicken (DH 80.00)\n");
                 printf("Select item: ");
                 scanf("%d", &subChoice);
 
@@ -189,30 +189,30 @@ int main() {
     }
 
     printf("\n---------------------------------\n");
-    printf("Wach 3andk code promo? khmm fl code o ktbo  wlla 0 ila ma3andkch): ");
+    printf("Do you have a promo code? Enter the code or 0 if you do not: ");
     scanf("%s", promoCode);
 
     if (strcmp(promoCode, "CMH210Y") == 0) { 
         float extraDiscount = total * 0.10f;
         discount += extraDiscount;
-        printf(" Mabrouk! Ttbai9 10%% dyal code promo (CMH210Y) 3la l-mablagh!\n");
+        printf("Congratulations! You received a 10%% promo code discount (CMH210Y) on the amount!\n");
     } 
     else if (strcmp(promoCode, "TECH1337") == 0) { 
         float extraDiscount = total * 0.20f;
         discount += extraDiscount;
-        printf("Wili wili! Rak hacker, ttbai9 20%% dyal code promo (TECH1337)!\n");
+        printf("Wow! You are a hacker, a 20%% promo code discount (TECH1337) has been applied!\n");
     }
     else if (strcmp(promoCode, "0") == 0) {
-        printf("Ma3lina, la code promo khawi.\n");
+        printf("No promo code entered.\n");
     }
     else {
-        printf(" Code promo ghalat!\n");
+        printf("Invalid promo code!\n");
     }
 
     printf("\n=================================\n");
-    printf("Total initial : $%.2f\n", total);
-    printf("Remise (Discount) : -$%.2f\n", discount);
-    printf("Total a payer : $%.2f\n", total - discount);
+    printf("Initial total : $%.2f\n", total);
+    printf("Discount : -$%.2f\n", discount);
+    printf("Total to pay : $%.2f\n", total - discount);
     printf("=================================\n");
 
     printf("\nPress Enter to exit...");
